@@ -1,0 +1,66 @@
+<app-layout></app-layout>
+<div class="container">
+  <!-- <a routerLink="/AddProduct" class="btn btn-primary">New Product</a> -->
+  <br><br>
+  <table class="table" style="margin-top:-560px;margin-right: 100px;">
+    <thead class="thead-light">
+      <tr>
+      
+        <th scope="col">من</th>
+        <th scope="col">الي</th>
+        <th scope="col">وقت الطلب</th>
+        <th scope="col">وقت الرحله</th>
+        <th scope="col">نوع عربيه النقل</th>
+        <th scope="col">نوع المركبة</th>
+        <th scope="col">اسم لعميل</th>
+        <th scope="col">اسم السائق</th>
+        <th scope="col">الفاتوره</th>
+        <th scope="col">تقييم العميل</th>
+        <th scope="col">تقييم السائق</th>
+        <!-- <th scope="col">عرض</th>
+        <th scope="col">عرض الطلبات</th> -->
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let req of RequestList|paginate: { itemsPerPage: 4, currentPage: p }">
+        <!-- <td>{{App.NationalID}}</td> -->
+        <td>{{req.Location}}</td>
+        <td>{{req.Destination}}</td>
+        <td>{{req.RequestTime}}</td>
+        <td>{{req.TripTime}}</td>
+        <td>{{req.ShippingType}}</td>
+        <td>{{req.carType}}</td>
+        <td>{{req.ClientName}}</td>
+        <td>{{req.DriverName}}</td>
+        <td>{{req.Bill}}</td>
+        <td>{{req.clientRate}}</td>
+        <td>{{req.DriverRate}}</td>
+        <!-- <td><a routerLink="/DriverDetails/{{Driver.NationalID}}" class="btn btn-info" >عرض</a></td>
+        <td><a routerLink="/RequsetType/{{Driver.NationalID}}" class="btn btn-info" >عرض الطلبات</a></td> -->
+        <!-- <td>{{App.CopyLicenseImage}}</td> -->
+        <!-- <td>{{App.CarModel}}</td>
+        <td>{{App.CarColor}}</td>
+        <td>{{App.CarType}}</td> -->
+        <!-- <td><img [src]="pro.image" width="100px" height="100px"></td>
+       
+        <td><a routerLink="/product/{{pro.ProductID}}" class="btn btn-primary" >Edit</a></td> 
+        <td><a routerLink="/Products" class="btn btn-danger" (click)="DeleteProduct(pro.ProductID)">Delete</a></td> 
+         -->
+      </tr>
+    </tbody>
+  </table>
+  <div style="margin-right:450px">
+      <div class="pagination" style="font-language-override: initial ;margin-right: 70px">  
+          <pagination-controls (pageChange)="p = $event" previousLabel="السابق" 
+          nextLabel="التالي"
+    
+          
+          ></pagination-controls>  
+        </div>
+        <div style="margin-right: 150px"> 
+            <button  class="btn btn-primary"  (click)="goBack()">الرجوع</button>
+          </div>
+      
+  </div>

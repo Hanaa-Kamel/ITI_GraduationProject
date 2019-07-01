@@ -1,0 +1,27 @@
+<app-layout></app-layout>
+<div class="card" style="width: 400px;margin-top: -550px; float: left;margin-left: 580px;" >
+  <img [src]="CurrentApplicant.CopyLicenseImage" width= 400px; height="400px;">
+    <div class="card-body" style="direction: rtl; text-align: right">
+      <h5 class="card-title">اسم السائق: {{CurrentApplicant.DriverName}}</h5>
+      <div class="card-text">
+          <div>الرقم القومي : {{CurrentApplicant.NationalID}}</div>
+        <div>العمر: {{CurrentApplicant.Age}}</div>
+        <div>الايميل: {{CurrentApplicant.Email}}</div>
+        <div>موديل العربيه : {{CurrentApplicant.CarModel}}</div>
+        <div>لون العربيه : {{CurrentApplicant.CarColor}}</div>
+        <div>نوع العربيه : {{CurrentApplicant.CarType}}</div>
+        
+        
+      
+      </div>
+     <div >
+      <button  class="btn btn-primary"  style="margin: 10px" (click)="AddDriver()">قبول</button>
+      <a routerLink="/applicant" class="btn btn-danger" (click)="DeleteApplicant(CurrentApplicant.NationalID)">حذف</a>
+        
+      <!-- <button  class="btn btn-primary" style="margin: 20px" (click)="goBack()">حذف</button> -->
+
+      <button  class="btn btn-primary"  style="margin: 10px" (click)="goBack()">الرجوع</button>
+    </div>
+    </div>
+  </div>
+  

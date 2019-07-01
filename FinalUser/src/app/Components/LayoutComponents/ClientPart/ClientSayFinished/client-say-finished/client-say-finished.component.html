@@ -1,0 +1,49 @@
+<app-clientheader></app-clientheader>
+
+
+
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" dir="rtl" style="background-color: brown" >
+  <div class="wrapper wrapper--w680 "  >
+    <div class="card card-4" >
+      <div class="card-body">
+        <h2 class="title" style="text-align: center;color:rgb(1, 43, 54)">  تقييم الخدمة وتسجيل الفاتورة</h2>
+        <form method="POST" (ngSubmit)="Finished(bill.value)">
+
+          <div class="row row-space"  >
+            <div class="col-lg-3">
+              <div class="input-group">
+                <label class="label" style="font-weight:bold"> الفاتورة</label><br><br>
+                <input #bill class="input--style-4" type="number" name=" bill" >
+              </div>
+            </div>
+        
+            <div class="col-lg-3">
+              <div class="input-group">
+                <label class="label"> تقييم</label><br><br>
+                <div style="text-align:center" >
+                  
+                  <star-rating value="5" checkedcolor="red" uncheckedcolor="black" size="24px"    readonly="false" (rate)="onRate($event)" id="star"></star-rating>
+  
+                </div>
+              </div>
+            </div>
+
+            
+
+           
+             
+            <div class="col-lg-3">
+              <button class="btn btn--radius-2 btn--blue" type="submit" style="width:60% ;margin-top: 45px" >حفظ</button>
+                </div>
+            
+         
+          </div>
+
+        </form>
+         
+      
+      </div>
+    </div>
+  </div>
+
+</div>

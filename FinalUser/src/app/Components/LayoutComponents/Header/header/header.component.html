@@ -1,0 +1,147 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.col-lg-6 {
+    width: 100%;
+    height: 47px;
+    
+    position: relative;
+    bottom: 6px;
+    
+}
+.col-lg-3
+{position: relative;
+  
+
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container-fluid" style="padding-top:0px;padding-bottom:0px;" id="uppernav" >
+    <div class="row">
+              <div class="col-lg-6" >
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <span style="font-size: 15px; font-family: 'El Messiri', sans-serif;" >basmaahmedzaky123@gmail.com</span>
+                            <i class="fa fa-envelope" style="font-size:15px ;color:rgb(1, 43, 54)" ></i>
+                            
+                         </div>
+                                <div class="col-lg-6">
+                                <span style="font-size: 15px; font-family: 'El Messiri', sans-serif;">01099075468</span>
+                                  <i class="fa fa-phone" style="font-size:15px;color:rgb(1, 43, 54)"></i>
+                                </div>
+                          
+                    </div>
+</div>
+<div class="col-lg-6" style="padding-top: 22px;padding-left: 30%">
+    <div class="row">
+      <div class="col-lg-6"></div>
+        <div class="col-lg-6">
+          <span><a  href="http://facebook.com"> <i class="fab fa-facebook" style="font-size:16px ;"></i></a></span>&nbsp;
+          <span ><a href="http://whatsapp.com"><i class="fab fa-whatsapp"style="font-size:16px ;color:rgb(1, 43, 54)" ></i></a></span>&nbsp;
+          <span ><a  href="http://linkedin.com"><i class="fab fa-linkedin" style="font-size:16px;color:rgb(1, 43, 54)"></i></a></span>&nbsp;
+          <span ><a href="http://twitter.com"> <i class="fab fa-twitter" style="font-size:16px;color:rgb(1, 43, 54)"></i></a></span>
+        </div>
+        
+                    
+      
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom "  style="padding:10px" dir="rtl">
+  <div class="container" id="donwnav">
+
+     <!-- color:rgb(219, 219, 16)-->
+     <span style="font-size: 40px;color: rgb(253, 244, 220)">انقلي </span> 
+      <span style="color:rgba(219, 219, 16, 0.918);font-size: 25px "> 
+          <span  class="fas fa-truck-pickup"  style="font-size:48px;color:rgb(255, 188, 5)"></span>
+        </span>
+        
+        
+         <span style="width:3px"></span>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon" style="color:wheat"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav" >
+  <ul class="nav navbar-nav ml-auto" >
+
+      <li class="nav-item active">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:rgb(241, 241, 219);font-size: 20px">الرئيسية <span class="sr-only">(current)</span></a>
+        </li>
+        
+    
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/DriverServices" routerLinkActive="active-link" style="color:rgb(241, 241, 219) ;font-size: 20px">خدمات السائق</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/ClientServices" routerLinkActive="active-link" style="color: rgb(241, 241, 219);font-size: 20px">خدمات العميل</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link"  routerLink="/AboutUs" routerLinkActive="active-link" style="color: rgb(241, 241, 219);font-size: 20px">عن الموقع</a>
+    </li>
+    
+  
+    </ul>
+    
+    <ul class="nav navbar-nav mr-auto" >
+     <li *ngIf=(!ISLogin)>
+      
+          <a class="nav-link"  routerLink="/RegisterOption" routerLinkActive="active-link">
+       
+          <span style="color:rgb(241, 241, 219);font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;padding: 2%; font-family: 'El Messiri', sans-serif;" class="navbar-brand"> <i class="fas fa-sign-in-alt" style="color:rgb(255, 188, 5);margin-left: 20%;"></i>سجل
+          </span>
+        </a>
+         
+      </li>
+      <li style=" width:10px;margin-left:10px"  ><span>&nbsp;</span></li>
+      <li *ngIf=(!ISLogin)>
+          <a class="nav-link"  routerLink="/LoginOption" routerLinkActive="active-link">
+         <span style="color:rgb(241, 241, 219);font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;padding: 2%; font-family: 'El Messiri', sans-serif;" class="navbar-brand"><i class="fas fa-user"  style="color:rgb(255, 188, 5);margin-left: 10%;"></i> تسجيل الدخول</span></a>
+      </li>
+
+
+      <li *ngIf=(ISLogin&&!Status)>
+          <a class="nav-link"  routerLink="/ClientContent" routerLinkActive="active-link">
+         <span style="color:rgb(241, 241, 219);font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;padding: 2%; font-family: 'El Messiri', sans-serif;" class="navbar-brand"><i class="fas fa-user-check"  style="color:rgb(255, 188, 5);margin-left: 10%;"></i> الصفحةالشخصية </span></a>
+      </li>
+
+      <li *ngIf=(ISLogin&&Status)>
+          <a class="nav-link"  routerLink="/DriverContent" routerLinkActive="active-link">
+         <span style="color:rgb(241, 241, 219);font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;padding: 2%; font-family: 'El Messiri', sans-serif;" class="navbar-brand"><i class="fas fa-user-check"  style="color:rgb(255, 188, 5);margin-left: 10%;"></i> الصفحة الشخصية</span></a>
+      </li>
+
+      <li *ngIf=(ISLogin)>
+          <a class="nav-link"   (click)="LogOut()">
+         <span style="color:rgb(241, 241, 219);font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;padding: 2%; font-family: 'El Messiri', sans-serif;" class="navbar-brand"><i class="fas fa-user"  style="color:rgb(255, 188, 5);margin-left: 10%;"></i> تسجيل خروج</span></a>
+      </li>
+      
+      
+      <!-- <li><a href="https://whatsap.com"><i class="fa fa-whatsapp" style="font-size:36px ;color:green ;padding: 2%"></i></a></li>
+      <li><a href="https://facebook.com"><i style="font-size:36px;color:rgb(1, 68, 155);padding: 2%" class="fa">&#xf082;</i></a></li>
+      <li><a href="https://linkedin.com"><i style="font-size:36px;color: rgb(18, 92, 189);padding: 2%" class="fa">&#xf08c;</i></a></li> -->
+
+
+
+      <!-- <li>
+          <a class="nav-link"  routerLink="/DriverContent" routerLinkActive="active-link">
+          <span style="color:white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;border: 3px solid white ;border-radius: 20% ;padding: 2%" class="navbar-brand">driver</span></a>
+         
+      </li>
+
+      
+      <li>
+          <a class="nav-link"  routerLink="/ClientContent" routerLinkActive="active-link">
+          <span style="color:white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;border: 3px solid white ;border-radius: 20% ;padding: 2%" class="navbar-brand">client</span></a>
+         
+      </li> -->
+    </ul>
+    </div>
+    </div>
+    </nav>
+  
+

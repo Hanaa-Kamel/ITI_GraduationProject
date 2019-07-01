@@ -1,0 +1,53 @@
+<app-layout></app-layout>
+<div class="container " style="margin-top:-560px;margin-left: 10px;">
+  <!-- <a routerLink="/AddProduct" class="btn btn-primary">New Product</a> -->
+  <br><br>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <!-- <th scope="col">NationalID</th> -->
+        <th scope="col">اسم المتقدم</th>
+        <th scope="col">عمر المتقدم</th>
+        <!-- <th scope="col">CopyLicenseImage</th> -->
+        <!-- <th scope="col">CarModel</th>
+        <th scope="col">CarColor</th>
+        <th scope="col">CarType</th> -->
+        <th scope="col">عرض</th>
+<!--         
+        
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th> -->
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let App of ApplicantList|paginate: { itemsPerPage: 4, currentPage: p }">
+        <!-- <td>{{App.NationalID}}</td> -->
+        <td>{{App.DriverName}}</td>
+        <td>{{App.Age}}</td>
+        <td><a routerLink="/ApplicantDetails/{{App.NationalID}}" class="btn btn-info" >عرض</a></td>
+        <!-- <td>{{App.CopyLicenseImage}}</td> -->
+        <!-- <td>{{App.CarModel}}</td>
+        <td>{{App.CarColor}}</td>
+        <td>{{App.CarType}}</td> -->
+        <!-- <td><img [src]="pro.image" width="100px" height="100px"></td>
+       
+        <td><a routerLink="/product/{{pro.ProductID}}" class="btn btn-primary" >Edit</a></td> 
+        <td><a routerLink="/Products" class="btn btn-danger" (click)="DeleteProduct(pro.ProductID)">Delete</a></td> 
+         -->
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  
+  <div style="margin-right:700px">
+      <div class="pagination" style="font-language-override: initial ">  
+          <pagination-controls (pageChange)="p = $event" previousLabel="السابق" 
+          nextLabel="التالي"
+    
+          
+          ></pagination-controls>  
+        </div>
+        
+      
+  </div>

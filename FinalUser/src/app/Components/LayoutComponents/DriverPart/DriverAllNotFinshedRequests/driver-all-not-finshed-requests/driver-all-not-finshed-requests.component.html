@@ -1,0 +1,47 @@
+<app-driver-header></app-driver-header>
+
+
+
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" dir="rtl" style="background-color: brown" >
+  <div class="wrapper wrapper--w680 "  >
+    <div class="card card-4" >
+      <div class="card-body">
+        <h2 class="title" style="text-align: center">الطلبات المتاحه</h2>
+        <form method="POST">
+
+          <div class="row row-space"  *ngFor="let FinishedAllRequests of ListOfFinishedAllRequests |paginate: { itemsPerPage: 1, currentPage: p }">
+            <div class="col-lg-2">
+              <div class="input-group">
+                <label class="label"> من</label><br><br>
+                <div class="input--style-4" type="text" name="رقم البطاقة">{{FinishedAllRequests.Location}}</div>
+              </div>
+            </div>
+          
+            <div class="col-lg-2">
+              <div class="input-group">
+                <label class="label">الي </label><br><br>
+                <div class="input--style-4" type="text" name="رقم البطاقة">{{FinishedAllRequests.Destination}}</div>
+              </div>
+            </div><br>
+            <div class="col-lg-8">
+              <div class="input-group">
+                <label class="label"> الوقت</label><br><br>
+                <div class="input--style-4" type="text" name="رقم البطاقة">{{FinishedAllRequests.TripTime}}</div>
+              </div>
+            </div>
+         
+          </div>
+
+        </form>
+        <div class="pagination" style="font-language-override: initial">  
+          <pagination-controls (pageChange)="p = $event" previousLabel="السابق" 
+          nextLabel="التالي"
+
+          
+          ></pagination-controls>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,60 @@
+<app-clientheader></app-clientheader>
+
+
+
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" dir="rtl" style="background-color: brown" >
+  <div class="wrapper wrapper--w680 "  >
+    <div class="card card-4" >
+      <div class="card-body">
+        <h2 class="title" style="text-align: center">الطلبات التي تمت</h2>
+        <form method="POST">
+
+          <div class="row row-space"  *ngFor="let FinishedRequests of ListFinshedRequests |paginate: { itemsPerPage: 1, currentPage: p }">
+            <div class="col-lg-3">
+              <div class="input-group">
+                <label class="label"> من</label><br><br>
+                <div class="input--style-4" type="text" name="رقم البطاقة">{{FinishedRequests.Location}}</div>
+              </div>
+            </div>
+          
+            <div class="col-lg-3">
+              <div class="input-group">
+                <label class="label">الي </label><br><br>
+                <div class="input--style-4" type="text" name="رقم البطاقة">{{FinishedRequests.Destination}}</div>
+              </div>
+            </div><br>
+            <div class="col-lg-2">
+              <div class="input-group">
+                <label class="label"> اسم السواق</label><br><br>
+                <div class="input--style-4" type="text" name="رقم البطاقة">{{FinishedRequests.DriverName}}</div>
+              </div>
+            </div>
+            <div class="col-lg-2">
+              <div class="input-group">
+                <label class="label"> الفاتورة</label><br><br>
+                <div class="input--style-4" type="text" name="رقم البطاقة">{{FinishedRequests.Bill}}</div>
+              </div>
+            </div>
+ 
+            <div class="col-lg-2">
+              <div class="input-group">
+                <label class="label"> تقييمك للرحلة</label><br><br>
+                <div class="input--style-4" type="text" name="رقم البطاقة">{{FinishedRequests.DriverRate}}</div>
+              </div>
+            </div>
+         
+          </div>
+
+        </form>
+        <div class="pagination" style="font-language-override: initial">  
+          <pagination-controls (pageChange)="p = $event" previousLabel="السابق" 
+          nextLabel="التالي"
+
+          
+          ></pagination-controls>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

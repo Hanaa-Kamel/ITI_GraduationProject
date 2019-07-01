@@ -1,0 +1,134 @@
+
+<body style=" font-family: 'El Messiri', sans-serif;">
+
+
+        <div class="container-contact100"  dir="rtl"style=" font-family: 'El Messiri', sans-serif;" >
+          <div class="wrap-contact100">
+            <form class="contact100-form validate-form" style=" font-family: 'El Messiri', sans-serif;">
+              <span class="contact100-form-title"style=" font-family: 'El Messiri', sans-serif;" >
+               أرسل إلينا رسالة
+              </span>
+      
+              <label  style="font-size: 18px" class="label-input100" for="first-name">ادخل اسمك *</label>
+              <div style="font-size: 18px" class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="ادخل الاسم الأول">
+                <input style="font-size: 18px" id="first-name" class="input100" type="text" name="first-name" placeholder="الاسم الأول">
+                <span style="font-size: 18px" class="focus-input100"></span>
+              </div>
+              <div style="font-size: 18px" class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="ادخل الاسم الثاني">
+                <input style="font-size: 18px" class="input100" type="text" name="last-name" placeholder="الاسم الثاني">
+                <span style="font-size: 18px" class="focus-input100"></span>
+              </div>
+      
+              <label style="font-size: 18px" class="label-input100" for="email">ادخل البريد الالكترونى *</label>
+              <div style="font-size: 18px" class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                <input style="font-size: 18px" id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
+                <span style="font-size: 18px" class="focus-input100"></span>
+              </div>
+      
+              <label style="font-size: 18px" class="label-input100" for="phone">ادخل رقم الهاتف</label>
+              <div class="wrap-input100" style="font-size: 18px">
+                <input  id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
+                <span class="focus-input100"></span>
+              </div>
+      
+              <label style="font-size: 18px" class="label-input100" for="message">الرسالة *</label>
+              <div  class="wrap-input100 validate-input" data-validate = "Message is required">
+                <textarea style="font-size: 18px" id="message" class="input100" name="message" placeholder="اكتب الرسالة"></textarea>
+                <span style="font-size: 18px" class="focus-input100"></span>
+              </div>
+      
+              <div style="font-size: 18px" class="container-contact100-form-btn">
+                <button style="font-size: 18px" class="contact100-form-btn">
+                  ارسل رسالة
+                </button>
+              </div>
+            </form>
+      
+            <div class="contact100-more flex-col-c-m" style="font-weight: bold;text-align:right;opacity: 0.8;background-image: url('assets/bg-01.jpg');">
+              <div class="flex-w size1 p-b-47" >
+                <div class="txt1 p-r-25">
+                  <span class="lnr lnr-map-marker"></span>
+                </div>
+      
+                <div class="flex-col size2" >
+                  <span class="txt1 p-b-20"style="font-size:30px;color:rgb(255, 188, 5)" >
+                    العنوان
+                  </span>
+      
+                  <span class="txt2" style="font-size:30px">
+                  معهد تكنولوجيا المعلومات جامعة أسيوط
+                  </span>
+                </div>
+              </div>
+      
+              <div class="dis-flex size1 p-b-47">
+                <div class="txt1 p-r-25">
+                  <span class="lnr lnr-phone-handset"></span>
+                </div>
+      
+                <div class="flex-col size2">
+                  <span class="txt1 p-b-20"  style="font-size:30px;color:rgb(255, 188, 5)">
+                    الهاتف
+                  </span>
+      
+                  <span class="txt3"  style="font-size:30px">
+                    12345678941256
+                  </span>
+                </div>
+              </div>
+      
+              <div class="dis-flex size1 p-b-47">
+                <div class="txt1 p-r-25">
+                  <span class="lnr lnr-envelope"></span>
+                </div>
+      
+                <div class="flex-col size2">
+                  <span class="txt1 p-b-20"  style="font-size:30px;color:rgb(255, 188, 5)">
+                    الدعم
+                  </span>
+      
+                  <span class="txt3"   style="font-size:30px">
+                    contact@example.com
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      
+      
+        <div id="dropDownSelect1"></div>
+      
+      <!--===============================================================================================-->
+        <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+      <!--===============================================================================================-->
+        <script src="vendor/animsition/js/animsition.min.js"></script>
+      <!--===============================================================================================-->
+        <script src="vendor/bootstrap/js/popper.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <!--===============================================================================================-->
+        <script src="vendor/select2/select2.min.js"></script>
+        <script>
+          $(".selection-2").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+          });
+        </script>
+      <!--===============================================================================================-->
+        <script src="vendor/daterangepicker/moment.min.js"></script>
+        <script src="vendor/daterangepicker/daterangepicker.js"></script>
+      <!--===============================================================================================-->
+        <script src="vendor/countdowntime/countdowntime.js"></script>
+      <!--===============================================================================================-->
+        <script src="js/main.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+      
+          gtag('config', 'UA-23581568-13');
+        </script>
+      </body>

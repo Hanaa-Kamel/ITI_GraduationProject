@@ -1,0 +1,59 @@
+<app-clientheader></app-clientheader>
+
+
+
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" dir="rtl" style="background-color: brown" >
+  <div class="wrapper wrapper--w680 "  >
+    <div class="card card-4" >
+      <div class="card-body">
+        <h2 class="title" style="text-align: center;color:rgb(1, 43, 54)">الطلبات  الحالية</h2>
+        <form method="POST">
+
+          <div class="row row-space"  *ngFor="let FinishedRequests of Lists |paginate: { itemsPerPage: 1, currentPage: p }">
+            <div class="col-lg-2">
+              <div class="input-group">
+                <label class="label" style="font-weight:bold"> من</label><br><br>
+                <div class="input--style-4" type="text" name=" Location">{{FinishedRequests.Location}}</div>
+              </div>
+            </div>
+          
+            <div class="col-lg-2">
+              <div class="input-group">
+                <label class="label" style="font-weight:bold">الي </label><br><br>
+                <div class="input--style-4" type="text" name=" Destination">{{FinishedRequests.Destination}}</div>
+              </div>
+            </div>
+
+              <div class="col-lg-2" style="display: none;width: 40%;">
+                <div class="input-group">
+                  <label class="label">الي </label><br><br>
+                  <div class="input--style-4" type="text" name=" Destination">{{FinishedRequests.RequestID}}</div>
+                </div>
+            </div><br>
+
+            <div class="col-lg-1">
+           <button class="btn btn--radius-2 btn--blue" type="submit" style="width:100%" (click)="Delete(FinishedRequests.RequestID)">حذف</button>
+             </div>
+            
+             <!-- <div class="col-lg-2"><span>&nbsp; &nbsp;</span></div> -->
+             <div class="col-lg-5">
+              <!-- <button class="btn btn--radius-2 btn--blue" type="submit" style="width:100%" ><a  class="nav-link"  routerLink="/ClientSayFinished/{}" routerLinkActive="active-link" style="text-decoration-style: none;color:white">قيم الخدمة وسجل الفاتورة </a></button> -->
+              <button class="btn btn--radius-2 btn--blue" type="submit" style="width:100%" (click)="PayBill(FinishedRequests.RequestID)">قيم الخدمة وسجل الفاتورة </button></div>
+                </div> 
+         
+          
+
+        </form>
+        <div class="pagination" style="font-language-override: initial">  
+          <pagination-controls  style="margin-top: 50px" (pageChange)="p = $event" previousLabel="السابق" 
+          nextLabel="التالي"
+
+
+          
+          ></pagination-controls>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

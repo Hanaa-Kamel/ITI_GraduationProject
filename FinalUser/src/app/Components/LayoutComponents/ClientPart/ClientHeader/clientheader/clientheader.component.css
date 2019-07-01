@@ -1,0 +1,249 @@
+.navbar-custom {
+    color: rgb(2, 2, 26);
+    background: rgb(1, 43, 54);
+    font-family: 'El Messiri', sans-serif;
+  }
+  .navbar-custom ul li a{
+    font-family: 'El Messiri', sans-serif;
+   
+  }
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .navbar ul.navbar-nav li.nav-item a.nav-link:hover {
+  
+  
+    color: rgb(0, 105, 97);
+    /* background-color: yellow; */
+  }
+  button.navbar-toggler.navbar-toggler-right {
+    border-color: yellow;
+    color:yellow;
+    /* background-color: yellow; */
+  }
+  
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: yellow !important;
+    
+  }
+  
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #ffffff;
+  }
+  
+  .navbar-toggle:hover {
+  
+    color: yellow !important;
+  }
+  
+  
+  /******/
+  
+  
+  
+  /* change navbar-brand color on hover */
+  .navbar a.navbar-brand:hover {
+    color: yellow;
+  
+    color: yellow;
+  }
+  /*  change navbar li colors, also active one but not disabled one */
+  .navbar ul.navbar-nav li.nav-item a.nav-link {
+    color: yellow;
+   
+    
+    
+  }
+  /* change navbar-toggler inside lines color (stroke) */
+  .navbar-light span.navbar-toggler-icon {
+    color: yellow;
+    background-color: yellow;
+   
+    
+  }
+  /* change hamburger button border color */
+  button.navbar-toggler.navbar-toggler-right {
+    border-color: yellow;
+   background-color: yellow;
+    color: yellow;
+  }
+  /*****************/
+  .navbar-toggle:hover {
+    background: white !important;
+    color: yellow !important;
+  }
+  
+  /**************/
+  /* @media (max-width: 768px) {
+    nav.navbar {
+      background: yellowgreen;
+    }
+  } */
+  /* change navbar background on collapse */
+  /*****/
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+  
+  
+  
+  
+  /* footer social icons */
+  
+  ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+  }
+  
+  ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+  }
+  
+  
+  /* footer social icons */
+  
+  .social-network a.icoFacebook:hover {
+    background-color: rgb(202, 214, 241);
+  }
+  
+  .social-network a.icoLinkedin:hover {
+    background-color: #cadde7;
+  }
+  
+  .social-network a.icoFacebook:hover i,
+  .social-network a.icoLinkedin:hover i {
+    color: #fff;
+  }
+  
+  .social-network a.socialIcon:hover,
+  .socialHoverClass {
+    color: rgb(222, 236, 240);
+  }
+  
+  .social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  
+  .social-circle li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .social-circle li a:hover i,
+  .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  
+  
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  
+  
+  /* footer social icons */
+  
+  .social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+  }
+  
+  .social-network a.icoLinkedin:hover {
+    background-color: #007bb7;
+  }
+  
+  .social-network a.icoFacebook:hover i,
+  .social-network a.icoLinkedin:hover i {
+    color: #fff;
+  }
+  
+  .social-network a.socialIcon:hover,
+  .socialHoverClass {
+    color: #44BCDD;
+  }
+  
+  .social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  
+  /*****#media query*****/
+  @media only screen and (min-width: 769px)and (max-width: 1024px)  {
+    /* For tablets: */
+    nav  #donwnav span {font-size: 60px;}
+    /* .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;} */
+    
+  
+  }

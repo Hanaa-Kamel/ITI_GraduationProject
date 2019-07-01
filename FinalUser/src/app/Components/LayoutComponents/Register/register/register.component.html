@@ -1,0 +1,215 @@
+<app-header></app-header>
+
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" dir="rtl">
+  <div class="wrapper wrapper--w680">
+    <div class="card card-4">
+      <div class="card-body">
+        <h2 class="title" style="text-align: center">التسجيل كسائق</h2>
+        <form method="POST" (ngSubmit)="onSubmit()">
+
+          <div class="row row-space">
+            <div class="col-lg-5">
+              <div class="input-group">
+                <label class="label" for="NID"> رقم البطاقه</label>
+                <input class="input--style-4" 
+                #NID="ngModel"
+                [(ngModel)]="Applicant.NationalID"
+                type="text"
+                class="form-control"
+                id="NID"
+                name="NID"
+                placeholder="الرقم القومي"
+                class="form-control"
+                 required minlength="14" 
+                 maxlength="14"
+             
+                
+                >
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="input-group">
+                <label class="label" for="name">الاسم </label><br>
+                <input class="input--style-4" 
+                
+                #name="ngModel"
+                [(ngModel)]="Applicant.DriverName"
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder=" الاسم"
+                required minlength="4"
+              
+               pattern="^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$">
+
+                <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                             class="alert alert-danger">
+
+                          <div *ngIf="name.errors.required">
+                          الاسم مطلوب
+                          </div>
+                                  <div *ngIf="name.errors.minlength">
+                            الاسم 4 حروف على الاقل
+                          </div>
+  
+
+                            </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="row row-space">
+            <div class="col-lg-5">
+              <div class="input-group">
+                <label class="label" for="typeOfCar"> نوع العربية</label><br>
+                <input class="input--style-4" 
+                #typeOfCar="ngModel"
+                [(ngModel)]="Applicant.CarType"
+                type="text"
+                class="form-control"
+                id="typeOfCar"
+                name="typeOfCar"
+                placeholder=" نوع العربية"
+                required
+                >
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="input-group">
+                <label class="label" for="modelOfCar"> موديل العربية </label><br>
+                <input class="input--style-4" 
+                #modelOfCar="ngModel"
+                [(ngModel)]="Applicant.CarModel"
+                type="text"
+                class="form-control"
+                id="modelOfCar"
+                name="modelOfCar"
+                placeholder=" موديل العربية"
+                required
+                
+                >
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="row row-space">
+            <div class="col-lg-5">
+              <div class="input-group">
+                <label class="label" for="Age">  العمر</label><br>
+                <input class="input--style-4" 
+                #Age="ngModel"
+                [(ngModel)]="Applicant.Age"
+                type="number"
+                class="form-control"
+                id="Age"
+                name="Age"
+                placeholder="  "
+                required>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="input-group">
+                <label class="label" for="Email"> البريد الالكترونى </label><br>
+                <input class="input--style-4" 
+                #Email="ngModel"
+                [(ngModel)]="Applicant.Email"
+                type="email"
+                class="form-control"
+                id="Email"
+                name="Email"
+                placeholder=" البريد الالكترونى"
+                required>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="row row-space">
+            <!-- <div class="col-lg-5">
+              <div class="input-group">
+                <label class="label"> رقم الهاتف</label>
+                <input class="input--style-4"  
+                #Applicant="ngModel"
+                [(ngModel)]="Applicant.phone"
+                type="number"
+                class="form-control"
+                id="phone"
+                name="phone"
+                placeholder=" رقم الهاتف"
+                required
+                
+                
+                >
+              </div>
+            </div>-->
+            <div class="col-lg-5">
+              <div class="input-group">
+                <label class="label" for="Password"> الرقم السري </label>
+                <input class="input--style-4" 
+                #Password="ngModel"
+                [(ngModel)]="Applicant.Password"
+                type="Password"
+                class="form-control"
+                id="Password"
+                name="Password"
+                placeholder=" الرقم السري"
+                required
+                >
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row row-space">
+           
+            <div class="col-lg-5">
+              <div class="input-group">
+                <label class="label" style="text-align: right" for="ConfirmPass"> تاكيد الرقم السري</label>
+                <input class="input--style-4" 
+                #ConfirmPass="ngModel"
+                [(ngModel)]="Applicant.ConfirmPass"
+                type="Password"
+                class="form-control"
+                id="ConfirmPass"
+                name="ConfirmPass"
+                placeholder="تاكيد الرقم السري "
+                required
+              >
+              </div>
+
+
+            </div>
+            <div class="col-lg-5">
+                <div class="input-group">
+  
+                  <label for="prdImageFile">صورة الرخصة</label>
+  
+  
+                  <input  id="prdImageFile" name="prdImageFile" #file type="file"
+                    accept='image/*' (change)="handleFileInput(file.files)" />
+                   <img [src]="Applicant.CopyLicenseImage" height="60" *ngIf="imgURL" width="60"  >  
+                  <!-- {{imgURL}} -->
+                  <!-- {{newPrd.ImageFile}} -->
+  
+  
+                </div>
+  
+  
+              </div>
+          </div>
+
+          <div class="p-t-15">
+            <button class="btn btn--radius-2 btn--blue" type="submit" style="width:100%">تأكيد</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

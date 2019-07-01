@@ -1,0 +1,56 @@
+
+  p {
+    font-size: 90px;
+  }
+  
+ 
+  button {
+    background: rgb(255, 188, 5);
+    color: white;
+    width: 3%;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    height: 8%;
+    font-size: 27px;
+    /* border-radius: 50%; */
+  }
+  
+  .scroll-to-top {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      opacity: 0;
+      transition: all .2s ease-in-out;
+  }
+  
+  .show-scroll {
+      opacity: 1;
+  }
+  
+  @media only screen and (max-width: 361px) {
+    /* For desktop: */
+    button{
+width: 13%;
+    }
+  }
+
+  @media only screen and (max-width: 412px) {
+    /* For desktop: */
+    button{
+width: 13%;
+    }
+  }
+
+  @media only screen and (max-width: 415px) {
+    /* For desktop: */
+    button{
+width: 13%;
+    }
+  }
+  @media only screen and (max-width: 769px) {
+    /* For desktop: */
+    button{
+width: 13%;
+    }
+  }

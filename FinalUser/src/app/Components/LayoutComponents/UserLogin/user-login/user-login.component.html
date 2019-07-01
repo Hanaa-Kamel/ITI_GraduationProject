@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" dir="rtl">
+    <div class="wrapper wrapper--w680">
+      <div class="card card-4">
+        <div class="card-body">
+          <h2 class="title" style="text-align: center">تسجيل الدخول</h2>
+          <form method="POST" (ngSubmit)="Login()">
+  
+            <div class="row row-space">
+              <div class="col-lg-10">
+                <div class="input-group">
+                  <label class="label"> البريد الالكتروني</label>
+                  <input class="input--style-4" type="text" name="رقم البطاقة" [(ngModel)]="name">
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="row row-space">
+             
+                <div class="col-lg-10">
+                  <div class="input-group">
+                    <label class="label">الرقم السري </label>
+                    <input class="input--style-4" type="password" name="الرقم السري" [(ngModel)]="password">
+                  </div>
+                </div>
+    
+              </div>
+    
+  
+  
+      
+  
+            <div class="p-t-15">
+              <button class="btn btn--radius-2 btn--blue" type="submit" style="width:100%">تأكيد</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <popup>
+    تأكد من صحة البريد الالكتروني والرقم السري
+  </popup> -->

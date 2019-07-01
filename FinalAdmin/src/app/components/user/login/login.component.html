@@ -1,0 +1,59 @@
+<!-- <div class="container"> -->
+<div class="body">
+ <div class="login-page">
+
+  <div class="row">
+    <div class="form">
+    <img class="center-block login-logo" alt="logo_img" src="assets/logo.PNG"  height="55">
+<hr>
+      <div >
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="no-click gridHead"> {{'account.login'|translate}} </span>
+           
+            <br />
+          </h3>
+        </div>
+        <div class="login-form">
+          <div class="alert alert-danger" *ngIf="result && !result.Success">
+             <strong>{{result.Message}}</strong> 
+          </div>
+          <form role="form" [formGroup]="form" (ngSubmit)="login()">
+            <fieldset>
+              <div class="form-group" [class.has-error]="!form.controls['email'].valid && form.controls['email'].dirty">
+                <label class="control-label">{{'account.email'|translate}}</label>
+                <input formControlName="email" class="form-control" placeholder="{{'account.email'|translate}}" name="email" type="text"
+                  autofocus>
+                <div class="text-danger" *ngIf="!form.controls['email'].valid && form.controls['email'].touched">
+                  <div *ngIf="form.controls['email'].hasError('required')">{{'shared.validation.required'|translate}}</div>
+                  <div *ngIf="form.controls['email'].hasError('maxLength')">{{'shared.validation.max-length-20'|translate}}</div>
+                  <div *ngIf="form.controls['email'].hasError('pattern')">{{'shared.validation.invalid-email'|translate}}</div>
+                </div>
+              </div>
+              <div class="form-group" [class.has-error]="!form.controls['password'].valid && form.controls['password'].dirty">
+                <label class="control-label">{{'account.password'|translate}}</label>
+                <input formControlName="password" class="form-control" placeholder="{{'password'|translate}}" name="password" type="password"
+                  value="">
+                <div class="text-danger" *ngIf="!form.controls['password'].valid && form.controls['password'].touched">
+                  <div *ngIf="form.controls['password'].hasError('required')">{{'هذه الخانة مطلوبة'|translate}}</div>
+                  <div *ngIf="form.controls['password'].hasError('minlength')">{{'shared.validation.min-length'|translate}}</div>
+                  <div *ngIf="form.controls['password'].hasError('maxLength')">{{'shared.validation.max-length-20'|translate}}</div>
+                </div>
+              </div>
+
+              <!-- Change this to a button or input when using this as a form -->
+              <button [disabled]="!form.valid || isLoading" class="btn btn-lg btn-success btn-block">{{'account.login'|translate}}</button>
+              <!-- <br>
+              <p class="text-center">
+                <a [routerLink]="['/forget-password']" routerLinkActive="router-link-active" >{{'account.forget-password'|translate}}</a>
+              </p> -->
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- </div> -->
+</div>
