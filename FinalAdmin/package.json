@@ -33,7 +33,7 @@
     "array-tree-filter": "^2.1.0",
     "core-js": "^2.5.4",
     "highcharts": "^7.1.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.23",
     "ng2-ckeditor": "^1.2.2",
     "ng2-tree": "^2.0.0-rc.11",
